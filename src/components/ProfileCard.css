@@ -1,0 +1,137 @@
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 20px;
+  transition: height 0.3s ease; 
+}
+
+.card.expanded {
+  height: 800px; 
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-button, .edit-button, .delete-button, .show-address-button {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 2px;
+}
+
+.card-button {
+  background-color: #008cff;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-button {
+  background-color: #0de82a;
+}
+
+.edit-button:hover {
+  background-color: #21c036;
+}
+
+.delete-button {
+  background-color: #d90e0e;
+}
+
+.delete-button:hover {
+  background-color: #ba2424;
+}
+
+.profile-details {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.profile-details:hover {
+  transform: translateY(-5px);
+}
+
+.profile-name {
+  font-size: 2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.profile-address {
+  font-size: 1rem;
+  color: #777;
+  margin: 10px 0;
+}
+
+.show-address-button {
+  background-color: #007bff;
+  color: rgb(1, 1, 1);
+}
+
+.show-address-button:hover {
+  background-color: #0056b3;
+}
+
+.profile-photo {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}

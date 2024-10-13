@@ -1,0 +1,97 @@
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-panel {
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-form input {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-form button {
+  padding: 10px 15px;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: rgba(0, 105, 217, 1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+ul li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+ul li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: rgba(40, 167, 69, 0.8);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: rgba(25, 135, 84, 1);
+}
+
+ul li button:last-of-type {
+  background-color: rgba(220, 53, 69, 0.8);
+}
+
+ul li button:last-of-type:hover {
+  background-color: rgba(185, 28, 40, 1);
+}
+
+@media (max-width: 768px) {
+  .admin-panel {
+    width: 95%;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
